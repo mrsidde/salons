@@ -1,0 +1,7 @@
+node_modules/
+dist/
+css/
+*.log
+.sass-cache/
+.DS_Store
+src/images/.DS_Store

@@ -1,0 +1,424 @@
+@import 'static/normalize';
+@import 'static/include-media.scss';
+@import 'variables';
+@import 'utils';
+
+
+@font-face {
+  font-family: 'millesBanner-light';
+  src: url(../fonts/font_bureau_millerBanner-Light.otf);
+}
+
+.content {
+  font-family: 'millesBanner-light';
+  overflow-x: hidden;
+}
+
+.ListView {
+  position: relative;
+  overflow: hidden;
+  left: 0%;
+
+  -webkit-transition: left 0.7s ease-in-out;
+  -moz-transition: left 0.7s ease-in-out;
+  -ms-transition: left 0.7s ease-in-out;
+  -o-transition: left 0.7s ease-in-out;
+  transition: left 0.7s ease-in-out;
+  &.is-hidden {
+    left: -100%;
+  }
+}
+.Header {
+  background-color: #FFFFFF;
+
+  &-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    border-bottom: 0.5px solid #B69F58;
+
+    @include media(">=mobile","<desktop") {
+      padding-left: $contentPadding-S;
+      padding-right: $contentPadding-S;
+    }
+    @include media(">=desktop") {
+      padding-left: $contentPadding-L;
+      padding-right: $contentPadding-L;
+    }
+
+  }
+
+  &-left {
+    flex: 1;
+    height: 18px;
+  }
+
+  &-middle {
+    flex: 8;
+    text-align: center;
+  }
+
+  &-right {
+    flex: 1;
+    background-image: url("../images/filter.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 18px;
+  }
+  &-bottom {
+    border-bottom: 0.5px solid #B69F58;
+
+    overflow: hidden;
+    height: 50px;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+
+    &.is-open {
+      height: 250px;
+    }
+  }
+}
+
+.FilterItem {
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  @include media(">=mobile","<desktop") {
+    padding-left: $contentPadding-S;
+    padding-right: $contentPadding-S;
+  }
+
+  @include media(">=desktop") {
+    padding-left: $contentPadding-L;
+    padding-right: $contentPadding-L;
+  }
+
+  &:hover{
+    .is-open &{
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  &-text {
+    font-size: 15px;
+    width: 150px;
+    float: left;
+    font-family: helvetica;
+    font-weight: 300;
+  }
+
+  &-icon {
+    width: 11px;
+    height: 11px;
+    float: left;
+    background-position: center;
+
+  }
+}
+
+.HairSalon-list {
+    .is-loading {
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    opacity: 0.5;
+  }
+}
+
+/* Each list item */
+.HairSalon-listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-top: 11px;
+  border-bottom: 0.5px solid #EEEEEE;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+
+  @include media(">=mobile","<desktop") {
+    padding-left: $contentPadding-S;
+    padding-right: $contentPadding-S;
+  }
+
+  @include media(">=desktop") {
+    padding-left: $contentPadding-L;
+    padding-right: $contentPadding-L;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &-left {
+    flex: 1;
+    align-self: flex-start;
+    padding-top: 5px;
+    padding-right: 15px;
+  }
+
+  &-middle {
+    align-self: center;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+  }
+
+  &-right {
+    align-self: flex-start;
+    padding-top: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-rightIcon {
+    align-self: center;
+    flex: 0.5;
+    background-position: right;
+
+  }
+}
+
+.HairSalon {
+
+  &-time {
+    font-size: 15px;
+    color: #202020;
+  }
+
+  &-title {
+    font-size: 20px;
+    color: #202020;
+
+    &--large {
+      font-size: 22px;
+      color: #ffffff;
+    }
+
+  }
+  &-score {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+  }
+  &-star {
+    padding: 4px;
+    background-image: url(../images/star.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 2px;
+
+    &--large {
+      padding: 5px;
+    }
+
+    &--empty {
+      background-image: url(../images/star_empty.png);
+    }
+  }
+  &-total {
+    font-size: 11px;
+    font-family: helvetica;
+    font-weight: 300;
+    &--large {
+      font-size: 13px;
+    }
+  }
+
+  &-address {
+    font-size: 15px;
+    color: #656565;
+  }
+
+  &-price {
+    flex: 1;
+    font-size: 15px;
+    color: #202020;
+    align-self: flex-end;
+  }
+
+  &-duration {
+    flex: 1;
+    font-size: 13px;
+    color: #656565;
+    align-self: flex-end;
+  }
+}
+
+.SingleView {
+  position: absolute;
+  overflow: hidden;
+  right: 0%;
+  top: 0;
+  width: 100%;
+  left: 0;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  &.is-hidden {
+    right: -100%;
+    left: 100%;
+
+  }
+}
+
+.HairSalon-banner {
+  height: 267px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/hairsalon_bgr.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(000,0,0,0), rgb(20, 20, 20));
+  }
+
+  @include media(">=mobile", "<=400px") {
+    background-size: auto 100%;
+  }
+
+  @include media(">400px", "<xl-desktop") {
+    background-size: 100% auto;
+  }
+
+  &-top {
+    flex: 3;
+    padding-top: 15px;
+    @include media(">=mobile","<desktop") {
+      padding-left: $contentPadding-S;
+      padding-right: $contentPadding-S;
+    }
+
+    @include media(">=desktop") {
+      padding-left: $contentPadding-L;
+      padding-right: $contentPadding-L;
+    }
+  }
+
+  &-topLeft {
+    float: left;
+    height: 19px;
+    width: 10px;
+  }
+
+  &-topRight {
+    float: right;
+    height: 24px;
+    width: 21px;
+  }
+
+  &-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    @include media(">=mobile","<desktop") {
+      padding-left: $contentPadding-S;
+      padding-right: $contentPadding-S;
+    }
+
+    @include media(">=desktop") {
+      padding-left: $contentPadding-L;
+      padding-right: $contentPadding-L;
+    }
+  }
+}
+
+.HairSalon-tabsList {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+
+  &-tab{
+    flex: 1;
+    text-align: center;
+    padding: 8px 0px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid #B69F58;
+    }
+  }
+  .is-active {
+    border-bottom: 2px solid #B69F58;
+  }
+}
+
+.HairSalon-info {
+  @include media(">=mobile","<desktop") {
+    padding-left: $contentPadding-S;
+    padding-right: $contentPadding-S;
+  }
+
+  @include media(">=desktop") {
+    padding-left: $contentPadding-L;
+    padding-right: $contentPadding-L;
+  }
+
+  &-item {
+    padding-top: 15px;
+
+    &:before {
+      padding-top: 15px;
+      content: '';
+      padding: 8px;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 90% auto;
+      margin-right: 5px;
+    }
+  }
+
+  &-address:before {
+    background-image: url("../images/location.png");
+  }
+
+  &-openingHours:before {
+    background-image: url("../images/clock.png");
+  }
+
+  &-phone:before {
+    background-image: url("../images/phone.png");
+  }
+
+  &-site:before {
+    background-image: url("../images/globe.png");
+  }
+}

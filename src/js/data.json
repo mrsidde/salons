@@ -1,0 +1,94 @@
+{
+  "salons": [
+    {
+      "id": "1",
+      "title": "Hår & Fön",
+      "openingHours": "09:00-18:00",
+      "stars": 4,
+      "totalReviews": 32,
+      "price": 320,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "12:00"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Ingelas salong",
+      "openingHours": "09:00-18:00",
+      "stars": 2,
+      "totalReviews": 14,
+      "price": 399,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "12:00"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Cut cut cut",
+      "openingHours": "09:00-18:00",
+      "stars": 4,
+      "totalReviews": 32,
+      "price": 120,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "09:00"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Das hair",
+      "openingHours": "09:00-18:00",
+      "stars": 1,
+      "totalReviews": 32,
+      "price": 650,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "12:00"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Tipp Topp",
+      "openingHours": "09:00-18:00",
+      "stars": 4,
+      "totalReviews": 32,
+      "price": 999,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "12:00"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Balled & Co",
+      "openingHours": "09:00-18:00",
+      "stars": 4,
+      "totalReviews": 32,
+      "price": 550,
+      "duration": 30,
+      "phone": "08-89 89 89",
+      "address": "Rådmansgatan 96, 113 54 Stockholm",
+      "site": "www.site.nu",
+      "availability": [
+        "12:00"
+      ]
+    }
+  ]
+}
