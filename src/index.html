@@ -4,13 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <title>Hair salons</title>
-    
+    <link rel="stylesheet" href="css/style.css" charset="utf-8">
 </head>
 
-<body class="">
-  <h1>Hejsan</h1>
+<body class="content">
+  <article class="ListView js-ListView">
+    <section class="Header">
+      <div class="Header-top">
+        <div class="Header-left u-returnIcon"></div>
+        <h2 class=" Header-middle">Hår</h2>
+        <div class="Header-right"></div>
+      </div>
+      <div class="Header-bottom js-Header-bottom">
+        <div class="FilterItem js-FilterItem" data-price-range='0, 999' data-index="1">
+          <p class="FilterItem-text">
+            Allt
+          </p>
+          <span class="FilterItem-icon u-expandIcon"></span>
+        </div>
+        <div class="FilterItem js-FilterItem" data-price-range='100, 299' data-index="2">
+          <p class="FilterItem-text">
+            Pris 100-299 kr
+          </p>
+        </div>
+        <div class="FilterItem js-FilterItem" data-price-range='300, 499' data-index="3">
+          <p class="FilterItem-text">
+            Pris 300-499 kr
+          </p>
+        </div>
+        <div class="FilterItem js-FilterItem" data-price-range='500, 749' data-index="4">
+          <p class="FilterItem-text">
+            Pris 500-749 kr
+          </p>
+        </div>
+        <div class="FilterItem js-FilterItem" data-price-range='750, 999' data-index="5">
+          <p class="FilterItem-text">
+            Pris 750-999 kr
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="HairSalon">
+      <section class="HairSalon-list js-HairSalon-list">
+        <div class="is-loading">
+
+        </div>
+      </section>
+  </article>
+    <article class="SingleView is-hidden js-SingleView">
+      <section class="HairSalon-banner">
+        <div class="HairSalon-banner-top">
+          <span class="HairSalon-banner-topLeft u-returnIcon js-returnButton">
+          </span>
+          <span class="HairSalon-banner-topRight u-heartIcon">
+          </span>
+        </div>
+
+        <div class="HairSalon-banner-bottom">
+          <div class="HairSalon-title HairSalon-title--large js-title">
+            Hår & fön
+          </div>
+          <span class="HairSalon-score">
+              <span class="HairSalon-star HairSalon-star--large"></span>
+              <span class="HairSalon-star HairSalon-star--large"></span>
+              <span class="HairSalon-star HairSalon-star--large"></span>
+              <span class="HairSalon-star HairSalon-star--large"></span>
+              <span class="HairSalon-star HairSalon-star--large HairSalon-star--empty"></span>
+              <span class="HairSalon-total HairSalon-total--large u-colorBlack js-total">(32)</span>
+          </span>
+        </div>
+      </section>
+      <section class="HairSalon-tabsList">
+        <p class="HairSalon-tabsList-tab is-active">
+          Info
+        </p>
+        <p class="HairSalon-tabsList-tab">
+          Schema
+        </p>
+      </section>
+      <section class="HairSalon-page-bottom HairSalon-info">
+        <p class="HairSalon-info-item HairSalon-info-address js-address">
+          Rådmansgatan 96,113 54 Stockholm
+        </p>
+        <p class="HairSalon-info-item HairSalon-info-openingHours js-openingHours">
+          Öppet idag till
+          <span data-hours>19:00 </span>
+          idag
+        </p>
+        <p class="HairSalon-info-item HairSalon-info-phone js-phone">
+          08-90 90 90
+        </p>
+        <p class="HairSalon-info-item HairSalon-info-site js-site">
+          www.site.nu
+        </p>
+      </section>
+
+    </section>
+  </article>
 
 
+
+	<script src="script.js"></script>
 </body>
 
 
